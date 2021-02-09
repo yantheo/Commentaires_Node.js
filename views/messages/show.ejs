@@ -1,0 +1,21 @@
+<%- include ('../pages/header.ejs') %>
+
+<div class="ui comments">
+        <div class="comment">
+            <a class="avatar" href="/message/<%= message.id %>">
+                <img src="https://randomuser.me/api/portraits/med/men/75.jpg" alt="randomuser">
+            </a>
+            <div class="content">
+                <div class="metadata">
+                    <div class="date">
+                        <%= message.created_at.fromNow() %>
+                    </div>
+                </div>
+                <div class="text">
+                    <%= message.content %>
+                </div>
+            </div>
+        </div>
+</div>
+
+<%- include ('../pages/footer.ejs') %>
